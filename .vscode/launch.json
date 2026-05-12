@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Debug STM32L432KC",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "openocd",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/firmware.elf",
+      "device": "STM32L432KC",
+      "interface": "swd",
+      "runToEntryPoint": "main",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32l4x.cfg"
+      ],
+      "preLaunchTask": "Build firmware",
+      "svdFile": "",
+      "showDevDebugOutput": "none"
+    }
+  ]
+}
