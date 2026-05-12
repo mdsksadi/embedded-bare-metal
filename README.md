@@ -25,3 +25,6 @@ The repository is based on:
 - Optimal utilisation of every resource
 - Comparehensive overview of the c programming language
 - The best file structure / code organisation / modularity / design pattern usage / etc.
+
+## Used-HW
+STM32L432KC
