@@ -14,7 +14,7 @@ Blink the onboard LED
 */
 static void rcc_setup(void)
 {
-    rcc_clock_setup_pll(&rcc_hsi16_configs[RCC_CLOCK_HSI16_80MHZ]);   // Set up the clock using the HSI16 oscillator and PLL to achieve 80 MHz system clock
+    rcc_clock_setup_pll(&rcc_hsi16_configs[RCC_CLOCK_3V3_80MHZ]);   // Set up the clock using the HSI16 oscillator and PLL to achieve 80 MHz system clock
 }
 
 /*
