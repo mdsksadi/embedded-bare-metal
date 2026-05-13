@@ -12,15 +12,14 @@ CFLAGS = -mcpu=$(CPU) -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16
 CFLAGS += -Wall -Wextra -Werror -std=c11
 CFLAGS += -ffunction-sections -fdata-sections
 CFLAGS += -g3 -O0
-CFLAGS += -I$(APP_DIR)
+CFLAGS += -I$(APP_DIR)/inc
 
 LDFLAGS = -T linkerscript.ld
 LDFLAGS += -Wl,--gc-sections
 LDFLAGS += -Wl,-Map=$(BUILD_DIR)/$(PROJECT).map
 LDFLAGS += -nostartfiles
 
-SRCS = startup_stm32l432kc.c \
-       $(APP_DIR)/firmware.c
+SRCS = $(APP_DIR)/src/firmware.c
 
 OBJS = $(SRCS:%.c=$(BUILD_DIR)/%.o)
 

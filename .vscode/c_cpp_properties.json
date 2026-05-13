@@ -12,10 +12,25 @@
                 "STM32L432KC",
                 "STM32L432xx"
             ],
-            "compilerPath": "arm-none-eabi-gcc",
+            "compilerPath": "C:\\arm-none-eabi-gcc\\bin\\arm-none-eabi-gcc",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-arm"
+        },
+        {
+            "name": "BareMetal",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\cygwin64\\bin\\gcc.exe",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
         }
     ],
     "version": 4
