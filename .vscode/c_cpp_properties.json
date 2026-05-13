@@ -1,21 +1,22 @@
 {
-  "configurations": [
-    {
-      "name": "STM32L432KC",
-      "includePath": [
-        "${workspaceFolder}/app",
-        "${workspaceFolder}/libopencm3/include"
-      ],
-      "defines": [
-        "STM32L4",
-        "STM32L432KC",
-        "STM32L432xx"
-      ],
-      "compilerPath": "arm-none-eabi-gcc",
-      "cStandard": "c11",
-      "cppStandard": "c++17",
-      "intelliSenseMode": "gcc-arm"
-    }
-  ],
-  "version": 4
+    "configurations": [
+        {
+            "name": "STM32L432KC",
+            "includePath": [
+                "${workspaceFolder}/app",
+                "${workspaceFolder}/libopencm3/include",
+                "${workspaceFolder}/app/inc"
+            ],
+            "defines": [
+                "STM32L4",
+                "STM32L432KC",
+                "STM32L432xx"
+            ],
+            "compilerPath": "arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
 }
