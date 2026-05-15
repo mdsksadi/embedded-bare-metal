@@ -28,3 +28,15 @@ The repository is based on:
 
 ## Used-HW
 STM32L432KC
+
+## The primary sources of information
+- The datasheet
+- The reference manual
+
+## What do these functions do?
+- Explore what's going on in the libopencm3 functions, like **gpio_mode_setup**
+
+## Better timing: Systick
+- Why peripherals are awsome?
+- What are interrupts, and what is the interrupt vector table?
+- Configuring the systick to automate our time keeping
