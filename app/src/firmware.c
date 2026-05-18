@@ -16,7 +16,8 @@ Blink the onboard LED
 volatile uint64_t ticks = 0;  // A volatile variable to keep track of the number of ticks (milliseconds) since the system started 
 void sys_tick_handler(void)
 {
-    
+    ticks++;  // Increment the tick count every time the SysTick interrupt occurs (every 1 ms)
+}
 
 /*
 * Setup the Reset and Clock Control
