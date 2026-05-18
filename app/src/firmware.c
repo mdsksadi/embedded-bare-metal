@@ -19,6 +19,11 @@ void sys_tick_handler(void)
     ticks++;  // Increment the tick count every time the SysTick interrupt occurs (every 1 ms)
 }
 
+static uint64_t get_ticks(void)
+{
+    return ticks;  // Return the current tick count, which represents the number of milliseconds since the system started
+}
+
 /*
 * Setup the Reset and Clock Control
 * I make it static to limit its scope to this file, as it's only used here. And make sure that this is available only in the translation unit where it's defined, which can help prevent naming conflicts and improve encapsulation.
