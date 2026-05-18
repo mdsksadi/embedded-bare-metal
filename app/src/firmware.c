@@ -52,16 +52,6 @@ static void systick_setup(void)
     systick_interrupt_enable();  // Enable the SysTick interrupt
 }
 
-/*
-* A simple delay function that creates a delay by executing a loop with no operations (NOPs). The number of cycles determines the length of the delay.
-*/
-static void delay_cycles(uint32_t cycles)
-{
-    for (uint32_t i = 0; i < cycles; i++)
-    {
-        __asm__("nop");  // No Operation: This assembly instruction does nothing and is used to create a delay
-    }
-}
 
 int main(void)
 {
@@ -69,11 +59,15 @@ int main(void)
     rcc_setup();   // Call the function to set up the clock
     gpio_setup();  // Call the function to set up the GPIO pin
 
+    uint64_t start_time = get_ticks();  // Get the current tick count to use as the start time for the delay
+
     // Create an infinite loop to keep the firmware running
     while (1)
     {
-        gpio_toggle(LED_PORT, LED_PIN);  // Toggle the state of GPIO pin B0 (turn the LED on or off)
-        delay_cycles(84000000/4);  // Call the delay function to create a delay
+        if (get_ticks() - start_time >= 1000)  // Check if 1000 ms (1 second) has passed since the last toggle
+        {
+            gpio_toggle(LED_PORT, LED_PIN);  // Toggle the state of GPIO pin B0 (turn the LED on or off)
+        }
     }
     
     // Never return from main in an embedded firmware application, but we include this to satisfy the C11 standard
