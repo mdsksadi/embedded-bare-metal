@@ -59,6 +59,8 @@ int main(void)
     rcc_setup();   // Call the function to set up the clock
     gpio_setup();  // Call the function to set up the GPIO pin
 
+    systick_setup();  // Call the function to set up the SysTick timer
+
     uint64_t start_time = get_ticks();  // Get the current tick count to use as the start time for the delay
 
     // Create an infinite loop to keep the firmware running
