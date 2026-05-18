@@ -69,6 +69,7 @@ int main(void)
         if (get_ticks() - start_time >= 1000)  // Check if 1000 ms (1 second) has passed since the last toggle
         {
             gpio_toggle(LED_PORT, LED_PIN);  // Toggle the state of GPIO pin B0 (turn the LED on or off)
+            start_time = get_ticks();  // Update the start time to the current tick count for the next delay
         }
     }
     
